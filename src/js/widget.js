@@ -71,7 +71,6 @@ export default class Widget {
 
         // определяем банк
         this.redrawBank();
-
     }
 
     onSubmit(event) {
