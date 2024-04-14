@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "lint": "eslint . --fix",
+    "lint": "eslint ./node_modules/eslint/bin/eslint.js ./src/js/app.js ./src/js/widget.js",
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "e2e": "jest --testPathPattern=./e2e/ --runInBand"

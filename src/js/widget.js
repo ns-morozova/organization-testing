@@ -139,7 +139,6 @@ export default class Widget {
         for(let icon of icons) {
             icon.classList.add('disabled');
         }
-        debugger;
         let typeBank = this.getBankPay(this.input.value);
         if (typeBank === null) {
             return;
