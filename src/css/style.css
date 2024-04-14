@@ -1,0 +1,53 @@
+.icons {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.icon {
+    width: 45px;
+    height: 30px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+.icon1 {
+    background-image: url('../pic/mir.png');
+    background-size: contain; 
+}
+
+.icon2 {
+    background-image: url('../pic/visa.png');
+    background-size: contain; 
+}
+
+.icon3 {
+    background-image: url('../pic/mastercard.png');
+    background-size: contain; 
+}
+
+.icon4 {
+    background-image: url('../pic/discover.png');
+    background-size: contain; 
+}
+
+.icon5 {
+    background-image: url('../pic/unionpay.png');
+    background-size: contain; 
+}
+
+.disabled {
+    background-color: black;
+    opacity: 25%;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.valid {
+    background-color: #BDECB6;
+}
+
+.invalid {
+    background-color: red;
+}
