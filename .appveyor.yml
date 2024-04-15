@@ -23,7 +23,7 @@ test_script:
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
-  - git config --global user.name AppVeyor
-  - git config --global user.email ci@appveyor.com
+  - git config --global user.name ns-morozova
+  - git config --global user.email ns_morozova@mail.ru
   - echo "https://%GITHUB_TOKEN%:x-oauth-basic@github.com" > "%HOMEPATH%\.git-credentials"
   - npx push-dir --dir=dist --branch=gh-pages --force --verbose
