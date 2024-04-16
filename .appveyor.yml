@@ -23,10 +23,8 @@ test_script:
   - npm run lint && npm test  # скрипт тестирования
 
 deploy_script:  # скрипт развёртывания
-  - cmd: git config --global credential.https://github.com.username ns-morozova
-  - cmd: git config --global credential.helper store
-  - cmd: git config --global user.name ns-morozova
-  - cmd: git config --global user.email ns_morozova@mail.ru
-  - cmd: git config --global user.password %GITHUB_TOKEN%
-  - cmd: echo https://%GITHUB_TOKEN%:x-oauth-basic@github.com > %HOMEDRIVE%%HOMEPATH%\.git-credentials
-  - cmd: npx push-dir --dir=dist --branch=gh-pages --force --verbose
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_TOKEN):x-oauth-basic@github.com`n"
+  - git config --global user.name ns-morozova
+  - git config --global user.email ns_morozova@mail.ru  
+  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
