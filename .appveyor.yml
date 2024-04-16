@@ -27,6 +27,6 @@ deploy_script:  # скрипт развёртывания
   - cmd: git config --global credential.helper store
   - cmd: git config --global user.name ns-morozova
   - cmd: git config --global user.email ns_morozova@mail.ru
-  - cmd: echo https://%GITHUB_TOKEN%:x-oauth-basic@github.com
+  - cmd: git config --global user.password %GITHUB_TOKEN%
   - cmd: echo https://%GITHUB_TOKEN%:x-oauth-basic@github.com > %HOMEDRIVE%%HOMEPATH%\.git-credentials
   - cmd: npx push-dir --dir=dist --branch=gh-pages --force --verbose
